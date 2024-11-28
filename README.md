@@ -11,4 +11,6 @@ Desde el root `./app`, ejecutar en el siguiente orden:
 ## Parte II
 Desde el root `./app`, ejecutar en el siguiente orden:
 
-1. Ejecutar Locust para testing
+1. Ejecutar Locust para testing `locust -f locustfile.py --headless -H http://localhost:8000 -u 30 -r 1 --run-time 180s --csv=./locust/stats`
+2. Ejecutar JMeter para probar endpoint `jmeter -n -t app/tests/jmeter/test_plan_2.jmx -l app/tests/out2/results.jtl`
+3. Ejecutar script logs `python3 scripts/search_logs.py`
