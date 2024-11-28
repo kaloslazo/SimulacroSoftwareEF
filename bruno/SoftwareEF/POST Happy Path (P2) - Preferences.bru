@@ -1,0 +1,19 @@
+meta {
+  name: POST Happy Path (P2) - Preferences
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8000/preferences/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "user_id": 1,
+      "movie_min_rating": 8.5, 
+      "movie_genre": "Action"
+  }
+}
